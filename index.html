@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrimeEstate | Find Your Dream Property</title>
+
+    <meta name="description"
+        content="Discover premium properties for sale and rent with PrimeEstate.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Prime<span>Estate</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-button">Get In Touch</a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="hero-tag">FIND YOUR PERFECT PLACE</p>
+
+                <h1>Find Your Dream Home With PrimeEstate</h1>
+
+                <p>
+                    Discover exceptional properties and find a place
+                    where your future begins.
+                </p>
+
+                <a href="#properties" class="primary-button">
+                    Explore Properties
+                </a>
+            </div>
+
+        </section>
+
+        <!-- PROPERTY SEARCH -->
+        <section class="search-section">
+
+            <h2>Find Your Property</h2>
+
+            <form class="search-form">
+
+                <select id="propertyType">
+                    <option value="">Property Type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+
+                <select id="propertyStatus">
+                    <option value="">Property Status</option>
+                    <option value="sale">For Sale</option>
+                    <option value="rent">For Rent</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter Location">
+
+                <button type="submit">Search Property</button>
+
+            </form>
+
+        </section>
+
+        <!-- FEATURED PROPERTIES -->
+        <section class="properties" id="properties">
+
+            <div class="section-heading">
+                <p>OUR PROPERTY COLLECTION</p>
+                <h2>Featured Properties</h2>
+            </div>
+
+            <div class="property-grid">
+
+                <!-- PROPERTY 1 -->
+                <article class="property-card"
+                    data-type="house"
+                    data-status="sale"
+                    data-location="Islamabad">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                            alt="Modern luxury house">
+                    </div>
+
+                    <div class="property-info">
+                        <span>For Sale</span>
+                        <h3>Modern Luxury House</h3>
+                        <p>Islamabad, Pakistan</p>
+                        <h3>PKR 3.5 Crore</h3>
+
+                        <a href="property-details.html" class="property-btn">
+                        View Details
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROPERTY 2 -->
+                <article class="property-card"
+                    data-type="apartment"
+                    data-status="rent"
+                    data-location="Rawalpindi">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                            alt="Modern apartment">
+                    </div>
+
+                    <div class="property-info">
+                        <span>For Rent</span>
+                        <h3>Luxury Modern Apartment</h3>
+                        <p>Rawalpindi, Pakistan</p>
+                        <h3>PKR 85,000 / Month</h3>
+                        <a href="apartment-details.html" class="property-btn">
+                                View Details
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROPERTY 3 -->
+                <article class="property-card"
+                    data-type="house"
+                    data-status="sale"
+                    data-location="Bahria Town, Rawalpindi">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+                            alt="Beautiful family home">
+                    </div>
+
+                    <div class="property-info">
+                        <span>For Sale</span>
+                        <h3>Beautiful Family Home</h3>
+                        <p>Bahria Town, Rawalpindi</p>
+                        <h3>PKR 2.8 Crore</h3>
+                        <a href="family-home-details.html" class="property-btn">
+                                View Details
+                        </a>
+                        
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+            <div>
+                <p>ABOUT PRIMEESTATE</p>
+                <h2>Your Trusted Real Estate Partner</h2>
+
+                <p>
+                    We help people find their ideal properties.
+                    Our goal is to make buying, selling and renting
+                    properties simple and convenient.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services" id="services">
+
+            <div class="section-heading">
+                <p>WHAT WE OFFER</p>
+                <h2>Our Services</h2>
+            </div>
+
+            <div class="service-grid">
+
+                <article>
+                    <h3>Buy Property</h3>
+                    <p>Find the perfect property for your family.</p>
+                </article>
+
+                <article>
+                    <h3>Sell Property</h3>
+                    <p>Get assistance selling your property.</p>
+                </article>
+
+                <article>
+                    <h3>Rent Property</h3>
+                    <p>Discover suitable rental properties.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+      
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+        <p>GET IN TOUCH</p>
+        <h2>Contact Our Team</h2>
+    </div>
+
+    <form
+        class="contact-form"
+        id="contactForm"
+        action="https://formsubmit.co/zainularfin14@gmail.com"
+        method="POST"
+    >
+
+        <input
+            type="text"
+            id="contactName"
+            name="name"
+            placeholder="Your Name"
+            minlength="3"
+            required
+        >
+
+        <input
+            type="email"
+            id="contactEmail"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <textarea
+            id="contactMessage"
+            name="message"
+            placeholder="Your Message"
+            minlength="10"
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <p id="formMessage"></p>
+
+</section>
+
+n>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>PrimeEstate</h2>
+
+        <p>Find your dream property with confidence.</p>
+
+        <p>&copy; 2026 PrimeEstate. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

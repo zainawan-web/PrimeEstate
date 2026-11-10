@@ -1,0 +1,585 @@
+
+/* =========================
+   1. GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #14243A;
+    background: #FFFFFF;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* =========================
+   2. NAVIGATION BAR
+========================= */
+
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #14243A;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #C8A45D;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #C8A45D;
+}
+
+.nav-button {
+    background: #C8A45D;
+    color: #14243A;
+    padding: 11px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(
+            rgba(20, 36, 58, 0.72),
+            rgba(20, 36, 58, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.hero-tag {
+    color: #C8A45D;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.hero-tag) {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: #C8A45D;
+    color: #14243A;
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button:hover,
+.nav-button:hover {
+    background: #FFFFFF;
+}
+
+/* =========================
+   4. PROPERTY SEARCH
+========================= */
+
+.search-section {
+    padding: 45px 7%;
+    text-align: center;
+    background: #F5F6F8;
+}
+
+.search-section h2 {
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-form input,
+.search-form select {
+    flex: 1;
+    min-width: 170px;
+    padding: 14px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background: white;
+}
+
+.search-form button,
+.contact-form button {
+    background: #14243A;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover,
+.contact-form button:hover {
+    background: #C8A45D;
+    color: #14243A;
+}
+
+/* =========================
+   5. PROPERTY SECTION
+========================= */
+
+.properties,
+.services,
+.contact {
+    padding: 80px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading > p {
+    color: #C8A45D;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.property-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-7px);
+}
+
+.property-image {
+    height: 230px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 22px;
+}
+
+.property-info span {
+    color: #A47D36;
+    font-weight: bold;
+}
+
+.property-info h3 {
+    margin: 10px 0;
+}
+
+.property-info p {
+    color: #777;
+}
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about {
+    background: #F5F6F8;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about > div {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about > div > p:first-child {
+    color: #A47D36;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+/* =========================
+   7. SERVICES SECTION
+========================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-grid article {
+    padding: 35px 25px;
+    text-align: center;
+    background: #F5F6F8;
+    border-radius: 10px;
+}
+
+.service-grid h3 {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   8. CONTACT SECTION
+========================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    background: #FFFFFF;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 13px 25px;
+    background: #C8A45D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #14243A;
+    color: #FFFFFF;
+}
+
+#formMessage {
+    max-width: 550px;
+    margin: 10px auto;
+    text-align: center;
+    color: #16803D;
+    font-weight: bold;
+}
+
+/* =========================
+   9. FOOTER
+========================= */
+
+footer {
+    background: #14243A;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    color: #C8A45D;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   10. PROPERTY DETAILS PAGE
+========================= */
+
+.property-details {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #FFFFFF;
+}
+
+.property-details h1 {
+    font-size: 36px;
+    color: #14243A;
+    margin-bottom: 10px;
+}
+
+.property-details > p:first-of-type {
+    color: #777777;
+    margin-bottom: 25px;
+}
+
+.property-details img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.property-details h2 {
+    color: #C8A45D;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.property-details h3 {
+    color: #14243A;
+    font-size: 23px;
+    margin: 25px 0 12px;
+}
+
+.property-details p {
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.property-btn {
+    display: inline-block;
+    background: #C8A45D;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.property-btn:hover {
+    background: #14243A;
+}
+
+/* =========================
+   11. TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+
+    .property-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================
+   12. MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #FFFFFF;
+        background: transparent;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 1002;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        background: #14243A;
+        padding: 20px 0;
+        margin-top: 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+}
+
+/* =========================
+   13. SMALL MOBILE SCREENS
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .property-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content > p:not(.hero-tag) {
+        font-size: 16px;
+    }
+
+    .search-section {
+        padding: 35px 6%;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input,
+    .search-form select,
+    .search-form button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .properties,
+    .services,
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .property-details {
+        margin: 25px auto;
+        padding: 18px;
+    }
+
+    .property-details h1 {
+        font-size: 27px;
+    }
+
+    .property-details h2 {
+        font-size: 24px;
+    }
+
+    .property-details img {
+        max-height: 300px;
+    }
+
+}
